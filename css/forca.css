@@ -1,0 +1,183 @@
+/* Eduardo Luiz Pontes de Souza 28/03/2022 */
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Setando tamanhos da viewport  */
+    width: 100vw;
+    height: 90vh;
+
+    margin-top: 10px;
+}
+
+.container {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+/* Setando padrão de cor para visualização inicial da página */
+#view-padrao {
+    background-color: goldenrod;
+}
+
+/* Controle dos botões de alteração de light e dark mode */
+#view-mode-button {
+    width: 100%;
+}
+
+#imagem {
+    background-image: url("../img/forca.png");
+    background-repeat: no-repeat;
+    width: 234px;
+    height: 272px;
+}
+
+#palavra-secreta {
+    display: flex;
+
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1em;
+
+    margin-top: 30px;
+}
+
+.letras {
+    width: 16px;
+    padding: 2px;
+    margin-left: 2px;
+    margin-right: 2px;
+
+    text-align: center;
+
+    border-bottom: 3px solid #8b008b;
+
+    color: #8b008b;
+
+    font-weight: 800;
+}
+
+#teclado {
+    margin-top: 30px;
+
+}
+
+.teclas button {
+    width: 24px;
+    height: 24px;
+    margin: 2px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    box-shadow: 0px 2px 3px #D0D3D4;
+    border-radius: 5px;
+    border: 1px solid #D0D3D4;
+    background-color: #ECF0F1;
+    color: #8b008b;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 900;
+}
+
+/* Mudando cursor em tecla já clicada */
+.teclas button:disabled {
+    cursor: not-allowed;
+}
+
+.teclas button:hover {
+    transform: scale(1.4);
+}
+
+#categoria {
+    margin-top: 30px;
+
+    color: #8b008b;
+
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.2em;
+    font-weight: 800;
+}
+
+/* Setando tamanho para diferentes telas */
+@media (min-width: 321px) {
+    .teclas button {
+        width: 25px;
+        height: 25px;
+    }
+
+    #categoria {
+        font-size: 1.2em;
+    }
+}
+
+@media (min-width: 376px) {
+    .teclas button {
+        width: 30px;
+        height: 30px;
+    }
+
+    #palavra-secreta {
+        font-size: 1.5em;
+    }
+
+    .letras {
+        width: 18px;
+    }
+
+    #categoria {
+        font-size: 1.5em;
+    }
+}
+
+@media (min-width: 426px) {
+    .teclas button {
+        width: 36px;
+        height: 36px;
+    }
+
+    #palavra-secreta {
+        font-size: 1.5em;
+    }
+
+    .letras {
+        width: 20px;
+    }
+
+    #categoria {
+        font-size: 1.6em;
+    }
+}
+
+@media (min-width: 769px) {
+    .teclas button {
+        width: 68px;
+        height: 68px;
+
+        font-size: 2em;
+    }
+
+    #palavra-secreta {
+        font-size: 2.5em;
+    }
+
+    .letras {
+        width: 35px;
+    }
+
+    #categoria {
+        font-size: 2em;
+    }
+}
